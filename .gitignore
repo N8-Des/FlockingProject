@@ -27,6 +27,7 @@
 *.out
 *.app
 
+.vs/
 .idea/
 
 cmake-build*
