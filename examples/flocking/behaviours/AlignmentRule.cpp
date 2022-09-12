@@ -23,5 +23,5 @@ Vector2 AlignmentRule::computeForce(const std::vector<Boid*>& neighborhood, Boid
     Vector2 extraVelocity = averageVelocity - normalizedForce;
     Vector2 addedMag = normalizedForce + Vector2(log(extraVelocity.x + 1), log(extraVelocity.y + 1));
     averageVelocity = addedMag;
-    return averageVelocity;
+    return normalizedForce;
 }

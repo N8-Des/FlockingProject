@@ -20,5 +20,5 @@ Vector2 CohesionRule::computeForce(const std::vector<Boid*>& neighborhood, Boid*
     Vector2 extraVelocity = cohesionForce - normalizedForce;
     Vector2 addedMag = normalizedForce + Vector2(log(extraVelocity.x + 1), log(extraVelocity.y + 1));
     cohesionForce = addedMag;
-    return cohesionForce;
+    return normalizedForce;
 }
